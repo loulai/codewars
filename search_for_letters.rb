@@ -20,3 +20,16 @@ def change a
 end
 
 change("cehs")
+
+# this now works! but not for exceptions. working on that.
+def change a 
+  zero_array = ("0"*26).chars
+  alphabet = [*"a".."z"]
+  
+  a_chars = a.downcase.chars
+  
+  a_chars.each {|char| zero_array[alphabet.index(char)] = "1"}
+  
+  end_result = zero_array.join
+  end_result
+end
