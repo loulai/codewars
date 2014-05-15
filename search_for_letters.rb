@@ -34,7 +34,7 @@ def change a
   end_result
 end
 
-#now works with exceptions!!! hurrah!!! (but havent run through codewars yet)
+#now works with most exceptions, but not one really super weird one...fixing now..
 def change a 
   zero_array = ("0"*26).chars
   alphabet = [*"a".."z"]
