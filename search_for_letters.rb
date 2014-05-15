@@ -33,3 +33,17 @@ def change a
   end_result = zero_array.join
   end_result
 end
+
+#now works with exceptions!!! hurrah!!! (but havent run through codewars yet)
+def change a 
+  zero_array = ("0"*26).chars
+  alphabet = [*"a".."z"]
+  
+  a_chars = a.downcase.chars
+  a_only_letters = a_chars.select {|whatever_char| alphabet.include? whatever_char}
+  
+  a_only_letters.each {|char| zero_array[alphabet.index(char)] = "1"}
+  
+  end_result = zero_array.join
+  end_result
+end
