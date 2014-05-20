@@ -9,30 +9,30 @@
 # So the returned string consists only of '1's and '0's.
 
 
-def change a 
-  zero_array = ("0"*26).chars
-  alphabet = [*"a".."z"]
-  top_alphabet = a.downcase.chars.sort.first
-  top_index = alphabet.index(top_alphabet)
-  zero_array[top_index] = "1"
-  end_result = zero_array.join
-  print end_result
-end
+# def change a 
+#   zero_array = ("0"*26).chars
+#   alphabet = [*"a".."z"]
+#   top_alphabet = a.downcase.chars.sort.first
+#   top_index = alphabet.index(top_alphabet)
+#   zero_array[top_index] = "1"
+#   end_result = zero_array.join
+#   print end_result
+# end
 
-change("cehs")
+# change("cehs")
 
-# this now works! but not for exceptions. working on that.
-def change a 
-  zero_array = ("0"*26).chars
-  alphabet = [*"a".."z"]
+# # this now works! but not for exceptions. working on that.
+# def change a 
+#   zero_array = ("0"*26).chars
+#   alphabet = [*"a".."z"]
   
-  a_chars = a.downcase.chars
+#   a_chars = a.downcase.chars
   
-  a_chars.each {|char| zero_array[alphabet.index(char)] = "1"}
+#   a_chars.each {|char| zero_array[alphabet.index(char)] = "1"}
   
-  end_result = zero_array.join
-  end_result
-end
+#   end_result = zero_array.join
+#   end_result
+# end
 
 #now works with most exceptions, but not one really super weird one...fixing now..
 def change a 
@@ -44,8 +44,37 @@ def change a
   
   arr_of_only_letters.each {|char| arr_of_zeros[alphabet.index(char)] = "1"}
   
-  end_result = arr_of_zeros.join
-  
-  end_result
+  arr_of_zeros.join  
 end
+
+
+def change string
+  zeroes_using(letters(string)).join
+end
+
+def alphabet
+  [*"a".."z"]
+end
+
+def letters(string)
+  chars(string).select {|char| alphabet.include? char}
+end
+
+def chars(string)
+  string.downcase.chars
+end
+
+def zeroes_using(letters)
+  zeros = ("0"*26).chars
+  letters.each {|char| zeros[alphabet.index(char)] = "1"}
+  zeros
+end
+
+
+
+
+
+
+
+
 
