@@ -36,14 +36,16 @@ end
 
 #now works with most exceptions, but not one really super weird one...fixing now..
 def change a 
-  zero_array = ("0"*26).chars
+  arr_of_zeros = ("0"*26).chars
   alphabet = [*"a".."z"]
+  arr_of_chars = a.downcase.chars
+
+  arr_of_only_letters = arr_of_chars.select {|whatever_char| alphabet.include? whatever_char}
   
-  a_chars = a.downcase.chars
-  a_only_letters = a_chars.select {|whatever_char| alphabet.include? whatever_char}
+  arr_of_only_letters.each {|char| arr_of_zeros[alphabet.index(char)] = "1"}
   
-  a_only_letters.each {|char| zero_array[alphabet.index(char)] = "1"}
+  end_result = arr_of_zeros.join
   
-  end_result = zero_array.join
   end_result
 end
+
