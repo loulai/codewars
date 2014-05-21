@@ -1,4 +1,5 @@
-# #String search
+#-----
+#String search
 
 # Create a method to accept one arbitrary string as an argument, and return a string of length 26.
 
@@ -8,33 +9,8 @@
 
 # So the returned string consists only of '1's and '0's.
 
-
-# def change a 
-#   zero_array = ("0"*26).chars
-#   alphabet = [*"a".."z"]
-#   top_alphabet = a.downcase.chars.sort.first
-#   top_index = alphabet.index(top_alphabet)
-#   zero_array[top_index] = "1"
-#   end_result = zero_array.join
-#   print end_result
-# end
-
-# change("cehs")
-
-# # this now works! but not for exceptions. working on that.
-# def change a 
-#   zero_array = ("0"*26).chars
-#   alphabet = [*"a".."z"]
-  
-#   a_chars = a.downcase.chars
-  
-#   a_chars.each {|char| zero_array[alphabet.index(char)] = "1"}
-  
-#   end_result = zero_array.join
-#   end_result
-# end
-
-#now works with most exceptions, but not one really super weird one...fixing now..
+#-----
+#below method works with all exceptions!
 def change a 
   arr_of_zeros = ("0"*26).chars
   alphabet = [*"a".."z"]
@@ -47,6 +23,9 @@ def change a
   arr_of_zeros.join  
 end
 
+#-----
+#below is the same thing but separated into several short methods to abide to the single responsibility rule
+#works just the same
 
 def change string
   zeroes_using(letters(string)).join
