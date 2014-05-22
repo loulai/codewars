@@ -3,14 +3,5 @@
 Example
 
 def say_hello(name, city, state)
-  if name.count == 1
-    "Hello, #{name}. Welcome to #{city}, #{state}!"
-    
-  elsif name.count % 2 == 0
-    name.each {|first, last| "Hello, #{first} #{last}. Welcome to #{city}, #{state}"}
-    
-  else
-  weirdo = name.pop
-    name.each {|first, last| "Hello, #{first} #{last}. Welcome to #{city}, #{state}"}
-  end
+
 end
