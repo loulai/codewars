@@ -3,3 +3,5 @@
 def solution(array, key)
 	array.sort_by {|hash| hash[key]}
 end
+
+#passes and is refactored
