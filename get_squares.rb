@@ -3,9 +3,6 @@
 # Note: Return only one copy of each perfect square in ascendingorder
 
 #----
-#works in irb but not in codewars, why.. trying to figure out
 def get_squares(array)
-  new_array = array.to_a
-  new_array.reject! {|num| (num ** 0.5).to_s.chars.last(1) != "0"}  
-  new_array
+	array.select {||}
 end
