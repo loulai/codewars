@@ -1,7 +1,7 @@
-def sum(*num)
-	# num_array = []
-	# num_array << num
-	print num.is_a?(Array)
-end
+# Unlimited Sum
+# Write a method sum that accepts an unlimited number of integer arguments, and adds all of them together.
+# The method should reject any arguments that are not integers, and sum the remaining integers.
 
-sum(1)
+print [1,2,3,4].inject {|acc, num| acc + num}
+
+
