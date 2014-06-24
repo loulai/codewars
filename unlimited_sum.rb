@@ -3,8 +3,8 @@
 # The method should reject any arguments that are not integers, and sum the remaining integers.
 
 def sum(*num)
-  num = num.select {|x| x.to_s =~ /\d+$/}
-  num.count == 1 ? num.first : num.inject(&:+)
+ num.select {|x| x.is_a?(Integer)}.inject(&:+)
 end
 
+print sum(21,2,3,4)
 
