@@ -5,8 +5,7 @@
 # squareSum([1,2, 2]) # should return 9
 
 def squareSum(numbers)
-  squared = numbers.map {|i| i * i }
-  squared.inject(&:+)
+  numbers.map {|i| i * i}.inject(&:+)
 end
 
 puts squareSum([1,2,2])
