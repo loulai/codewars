@@ -18,9 +18,26 @@
 # Bar.phone
 
 class Mother
-  # Add a method (or more) to track all kids
-  
-  def self.phone_kids
-    # Call the static method "phone" of all kids
+
+  @all_kids = []
+
+	def self.all_kids
+  	@all_kids
   end
+
+  def self.inherited(kid)
+  	@all_kids << kid
+  end
+
+  def self.phone_kids
+    @all_kids.each {|kid| kid.phone }
+  end
+
 end
+
+class Billy < Mother
+end
+
+class Jimmy < Mother
+end
+
