@@ -36,8 +36,21 @@ class Mother
 end
 
 class Billy < Mother
+	def self.phone
+	end
 end
 
 class Jimmy < Mother
+	def self.phone
+	end
 end
+
+class Little_Jimmy < Jimmy
+	def self.phone
+	end
+end
+
+Mother.phone_kids
+
+
 
