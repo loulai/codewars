@@ -17,3 +17,10 @@
 # Foo.phone
 # Bar.phone
 
+class Mother
+  # Add a method (or more) to track all kids
+  
+  def self.phone_kids
+    # Call the static method "phone" of all kids
+  end
+end
