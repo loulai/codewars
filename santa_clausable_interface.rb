@@ -32,5 +32,5 @@
 # is_santa_clausable(NotSantaClaus.new) # must return FALSE
 
 def is_santa_clausable(obj)
-  obj.respond_to?(:say_ho_ho_ho) && obj.respond_to?(:distribute_gifts) && obj.respond_to?(:go_down_the_chimney)
+    [:say_ho_ho_ho, :distribute_gifts, :go_down_the_chimney].all? {|method| obj.respond_to?(method)}
 end
