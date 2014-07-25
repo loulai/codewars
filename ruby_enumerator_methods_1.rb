@@ -16,6 +16,17 @@
 # check_ages?(data, :f, 22) # should be true
 # check_ages?(data, :m, 50) # should be false
 
+
+data = [
+  {age: 40, sex: :m},
+  {age: 24, sex: :f},
+  {age: 56, sex: :m},
+  {age: 45, sex: :m},
+  {age: 23, sex: :f} 
+]
+
 def check_ages?(data, sex, age_is_greater_than)
-  
+  print data.select {|hash| hash.key(sex)}
 end
+
+check_ages?(data, :f, 3)
