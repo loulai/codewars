@@ -26,7 +26,8 @@ data = [
 ]
 
 def check_ages?(data, sex, age_is_greater_than)
-  print data.select {|hash| hash.key(sex)}
+  gender = data.select {|hash| hash.key(sex)}
+  gender.all? { |hash| hash.key(:age) > age_is_greater_than  }
 end
 
 check_ages?(data, :f, 3)
